@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: webservices
+Implementation-Version: 0.0.1
+Built-By: allanfreitas
+Implementation-Vendor-Id: br.com.edu.ifpe.recife.labgeo.webservices
+Build-Jdk: 1.8.0_111
+Implementation-URL: http://projects.spring.io/spring-boot/webservices/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: br.edu.ifpe.recife.labgeo.MainWSApplication
+

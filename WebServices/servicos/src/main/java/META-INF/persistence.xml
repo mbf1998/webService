@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="servicos">
+		<class>br.edu.ifpe.recife.labgeo.domain.Questionario</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.Usuario</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.AguaSubterranea</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.Captacao</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.DenunciaHistorico</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.DenunciasFeature</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.Formulario</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.Locai</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.TipoDeUso</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.TipoManancial</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.TransicaoDenuncia</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.Manancial</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.DetalhamentoManancial</class>
+	</persistence-unit>
+</persistence>
