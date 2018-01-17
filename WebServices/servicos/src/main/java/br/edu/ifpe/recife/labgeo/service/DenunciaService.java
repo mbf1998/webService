@@ -31,6 +31,7 @@ public class DenunciaService {
 	}
 	
 	public Mensagem inserir(@RequestBody Denuncia dadosDenuncia){
+		//System.out.println("ENTROU NO INSERIR SERVICE ------------------------------------");
 		denunciaRepository.save(dadosDenuncia);
 		
 		return new Mensagem("sucesso! Você poderá acompanhar a sua denúncia por este ID: " + dadosDenuncia.getGdbArchiveOid());

@@ -1,13 +1,12 @@
 package br.edu.ifpe.recife.labgeo.odt;
 
-import java.util.Date;
-
 import br.edu.ifpe.recife.labgeo.domain.StatusDenuncia;
 
 public class DenunciaDTO {
 
 	private Integer id;
 	private String detalhe;
+	private String tit; //titulo
 	
 	private StatusDenuncia statusDenuncia;
 	
@@ -27,6 +26,12 @@ public class DenunciaDTO {
 		this.detalhe = detalhe;
 	}
 	
+	public String gettitulo() {
+		return tit;
+	}
+	public void settitulo(String tit) {
+		this.tit = tit;
+	}
 	
 	
 	public StatusDenuncia getStatusDenuncia() {

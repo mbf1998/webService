@@ -3,8 +3,8 @@ package br.edu.ifpe.recife.labgeo.repository;
 public interface DenunciaView {
 	
 	Integer getGdbArchiveOid();
-	String getDescricao();
-
+	String  gettitulo();
+	String  getDescricao();
 	Integer getStatus();
-	
+	String  getEndereco();
 }

@@ -3,7 +3,6 @@ package br.edu.ifpe.recife.labgeo.domain;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 import java.util.List;
 
 

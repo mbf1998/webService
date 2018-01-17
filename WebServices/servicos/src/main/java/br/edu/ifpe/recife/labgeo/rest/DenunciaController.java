@@ -27,7 +27,7 @@ public class DenunciaController {
 	DenunciaService denunciaService;
 
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET, value="/listar")
 	public List<DenunciaView> buscarTodos(){
 		return denunciaService.listarDenuncias();
 	}
@@ -39,7 +39,9 @@ public class DenunciaController {
 	
 	@RequestMapping(method  = RequestMethod.POST, value = {"/inserir"}, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public Mensagem inserirDenuncia (@RequestBody Denuncia dadosDenuncia){
-		dadosDenuncia.setGdbArchiveOid(null); // aDDED BY ALLAN.. implant WS
+		
+		//System.out.println("ENTROU NO INSERIR------------------------------------");
+		dadosDenuncia.setGdbArchiveOid(0); // aDDED BY ALLAN.. implant WS
 		
 		return denunciaService.inserir(dadosDenuncia);
 	}

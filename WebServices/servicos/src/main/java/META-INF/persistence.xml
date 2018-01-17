@@ -6,7 +6,7 @@
 		<class>br.edu.ifpe.recife.labgeo.domain.AguaSubterranea</class>
 		<class>br.edu.ifpe.recife.labgeo.domain.Captacao</class>
 		<class>br.edu.ifpe.recife.labgeo.domain.DenunciaHistorico</class>
-		<class>br.edu.ifpe.recife.labgeo.domain.DenunciasFeature</class>
+		<class>br.edu.ifpe.recife.labgeo.domain.Denuncia</class>
 		<class>br.edu.ifpe.recife.labgeo.domain.Formulario</class>
 		<class>br.edu.ifpe.recife.labgeo.domain.Locai</class>
 		<class>br.edu.ifpe.recife.labgeo.domain.TipoDeUso</class>
