@@ -27,6 +27,8 @@ public class Manancial implements Serializable {
 	@Column(name="houve_alteracao_captacao")
 	private Boolean houveAlteracaoCaptacao;
 
+	
+
 	private BigDecimal latitude;
 
 	private BigDecimal longitude;

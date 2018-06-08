@@ -7,4 +7,5 @@ public interface DenunciaView {
 	String  getDescricao();
 	Integer getStatus();
 	String  getEndereco();
+	String getArquivo();
 }

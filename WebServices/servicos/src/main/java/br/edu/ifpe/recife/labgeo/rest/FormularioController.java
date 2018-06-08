@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.edu.ifpe.recife.labgeo.domain.Formulario;
+import br.edu.ifpe.recife.labgeo.domain.TipoManancial;
+import br.edu.ifpe.recife.labgeo.repository.FormularioRepository;
 import br.edu.ifpe.recife.labgeo.repository.FormularioView;
+import br.edu.ifpe.recife.labgeo.repository.TipoManancialRepository;
 import br.edu.ifpe.recife.labgeo.service.FormularioService;
 import br.edu.ifpe.recife.labgeo.util.Mensagem;
 
@@ -25,6 +28,9 @@ public class FormularioController {
 	@Autowired
 	FormularioService formularioService;
 	
+	@Autowired
+	TipoManancialRepository tipoManancialRepository;
+	
 	@RequestMapping(method = RequestMethod.GET)
 	public List<FormularioView> buscarTodos() {
 		return formularioService.carregarTodos();
@@ -34,9 +40,14 @@ public class FormularioController {
 	public @ResponseBody Formulario buscarUm(@PathVariable String id) {
 		return formularioService.buscarUm(id);
 	}
-
+	@RequestMapping(method = RequestMethod.GET, value = "/tipoManancial/{id}")
+	public @ResponseBody TipoManancial buscardois(@PathVariable Integer id) {
+		return tipoManancialRepository.findOne(id);
+	}
 	@RequestMapping(value = "/inserir", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public Mensagem inserirFormulario(@RequestBody Formulario dadosFormulario) {
+		System.out.println("Entrou aqui");
+		
 		return formularioService.inserirFormulario(dadosFormulario);
 	}
 }

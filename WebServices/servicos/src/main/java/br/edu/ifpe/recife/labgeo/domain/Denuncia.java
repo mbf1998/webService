@@ -20,7 +20,7 @@ public class Denuncia implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="gdb_archive_oid")
 	private Integer gdbArchiveOid;
-
+	@Column(name="arquivo")
 	private String arquivo;
 
 	private String cep;

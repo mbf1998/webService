@@ -1,5 +1,6 @@
 package br.edu.ifpe.recife.labgeo.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,10 @@ public class FormularioService {
 	}
 	
 	public Mensagem inserirFormulario(Formulario dadosFormulario){
+		System.out.println(dadosFormulario.getDataHora());
+	    System.out.println(dadosFormulario.getNomeEntrevistado());
+		dadosFormulario.setMananciais(validarManancial(dadosFormulario.getMananciais()));
+		
 		for (int i = 0; i < dadosFormulario.getMananciais().size(); i++) {
 			// Pega o tipo de manancial, procura o tipo do manancial no banco e
 			// atribui ao manancial
@@ -75,5 +80,19 @@ public class FormularioService {
 		
 		return new Mensagem("sucesso");
 	}
-
+	
+	public List<Manancial> validarManancial (List<Manancial> listaMananciais) {
+		
+		List<Manancial> novaLista = new ArrayList<Manancial>();
+		
+		for(int i = 0; i < listaMananciais.size(); i++) {
+			
+			if(listaMananciais.get(i).getTipoManancial().getIdTipoManancial() != null) {
+				novaLista.add(listaMananciais.get(i));
+			}
+		}
+		
+		return novaLista;
+	}
+	
 }
